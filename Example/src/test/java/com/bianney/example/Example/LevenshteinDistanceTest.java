@@ -2,7 +2,8 @@ package com.bianney.example.Example;
 
 import static org.junit.Assert.*;
 
-import org.junit.*;
+import org.junit.Before;
+import org.junit.Test;
 
 import com.bianney.example.Example.LevenshteinDistance;
 
@@ -37,7 +38,6 @@ public class LevenshteinDistanceTest {
 	
 	@Test
 	public void TestSonIguales() {
-		
 		System.out.println("Son Iguales");
 		System.out.println("\""+str1+"\" y \""+str1+"\" no se diferencian\n");
 		assertNotEquals("\""+str1+"\" y \""+str1+"\" son iguales", 1, LevenshteinDistance.computeLevenshteinDistance(str1,str1));
