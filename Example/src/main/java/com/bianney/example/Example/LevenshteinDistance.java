@@ -1,6 +1,5 @@
 package com.bianney.example.Example;
 
-
 /**
  * 
  * Clase que calcula en cuanto difiere una palabra de otra

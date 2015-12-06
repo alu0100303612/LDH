@@ -18,7 +18,6 @@ public class LevenshteinDistanceTest {
 		System.out.print("Comienza el test: ");
 	}
 
-	
 	@Test
 	public void TestCreaObjeto() {
 		System.out.println("Creación correcta Objeto");
