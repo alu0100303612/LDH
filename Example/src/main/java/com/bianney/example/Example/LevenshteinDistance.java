@@ -11,9 +11,9 @@ public class LevenshteinDistance {
 	
 	/**
 	 * Método que devuelve el mínimo de entre tres enteros
-	 * @param a El parámetro a representa la distancia
-	 * @param b
-	 * @param c
+	 * @param a El parámetro a representa una distancia
+	 * @param b El parámetro b representa una distancia
+	 * @param c El parámetro c representa una distancia
 	 * @return
 	 */
     private static int minimum(int a, int b, int c) {
@@ -26,10 +26,22 @@ public class LevenshteinDistance {
         return c;
     }
 
+    /**
+     * Método que llama al método computeLevenshteinDistance pasándole como parámetro las palabras convertidas en arrays de char
+     * @param str1 El parámetro str1 es uno de los strings a evaluar
+     * @param str2 El parámetro str2 es el otro string a evaluar
+     * @return Devuelve el entero resultante al llamar a computeLevenshteinDistance pasando como argumento dos arrays de caracteres
+     */
     public static int computeLevenshteinDistance(String str1, String str2) {
         return computeLevenshteinDistance(str1.toCharArray(), str2.toCharArray());
     }
 
+    /**
+     * Método que calcula la distancia que exixte entre dos palabras
+     * @param str1 El parámetro str1 es un array de caracteres que representa la primera palabra a evaluar
+     * @param str2 El parámetro str2 es un array de caracteres que representa la segunda palabra a evaluar
+     * @return Devuelve un entero con la distancia que hay entre las palabras
+     */
     private static int computeLevenshteinDistance(char [] str1, char [] str2) {
         int [][]distance = new int[str1.length+1][str2.length+1];
         for(int i=0;i<=str1.length;i++){
@@ -49,11 +61,14 @@ public class LevenshteinDistance {
         return distance[str1.length][str2.length];   
     }
     
+    /**
+     * Programa principal
+     * @param args El parámetro args se pasa por defecto al main
+     */
     public static void main(String args[]) {
     	LevenshteinDistance l = new LevenshteinDistance();
     	int di;
     	di = l.computeLevenshteinDistance("Amor", "Coche");
     	System.out.println(""+di);
     }
-    
 }
