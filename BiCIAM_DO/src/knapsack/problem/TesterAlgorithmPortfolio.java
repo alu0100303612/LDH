@@ -45,4 +45,5 @@ public class TesterAlgorithmPortfolio {
 		Strategy.destroyExecute();
 		MultiGenerator.destroyMultiGenerator();
 	}
+
 }
