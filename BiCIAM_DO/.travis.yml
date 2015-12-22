@@ -1,13 +1,12 @@
-language: java
-
+language: scala
+scala:
+  - "2.10.3"
 jdk:
-  - oraclejdk8
   - oraclejdk7
-
-before_script:
-  - mvn build
-
-after_success:
-  - codecov
-  - mvn clean
-  - mvn sonar:sonar
+script:
+  - sbt $TASKS
+env:
+  - TASKS='test'
+notifications:
+  email:
+    - alu0100303612@ull.edu.es
