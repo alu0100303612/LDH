@@ -1,0 +1,12 @@
+language: scala
+scala:
+  - "2.10.3"
+jdk:
+  - oraclejdk7
+script:
+  - sbt $TASKS
+env:
+  - TASKS='test'
+notifications:
+  email:
+    - alu0100303612@ull.edu.es
